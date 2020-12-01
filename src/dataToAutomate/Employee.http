@@ -1,0 +1,30 @@
+GET http://dummy.restapiexample.com/api/v1/employee/
+
+#########
+GET http://dummy.restapiexample.com/api/v1/employees
+
+#########
+POST http://dummy.restapiexample.com/api/v1/create
+Content-Type: application/json
+
+{
+  "id": 45,
+  "employee_name": "Pavel Rudometkin",
+  "employee_salary": 399844,
+  "employee_age": "PT",
+  "profile_image": ""
+}
+
+
+###########
+PUT http://dummy.restapiexample.com/api/v1/update/63dssfsf99
+Content-Type: application/json
+
+{
+"name":"FYND",
+"salary":"123",
+"age":"23"
+}
+
+############
+DELETE http://dummy.restapiexample.com/api/v1/delete/
