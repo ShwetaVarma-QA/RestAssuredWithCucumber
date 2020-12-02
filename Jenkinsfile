@@ -17,8 +17,7 @@ pipeline {
 }
 
 private void sendEmailNotification(){
-mail
-to: 'shwetavarma28@gmail.com',
-          subject: 'Jenkins Pipeline Notification',
-           body: '''Hi,This is a test notification for your Jenkins Pipeline'''
+mail to: 'shwetavarma28@gmail.com',
+     subject: "Jenkins Pipeline Notification",
+     body: "Hi,This is a test notification for your Jenkins Pipeline"
 }
