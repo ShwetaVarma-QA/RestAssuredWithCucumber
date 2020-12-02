@@ -11,16 +11,14 @@ pipeline {
             steps {
                    sh './gradlew cucumber -P tags=@AllEmployees'
             }
-        }
-
-        stage('Email Notifications'){
-             steps  {
-                emailext body: '''Hi,
-
-                        This is a test notification for your Jenkins Pipeline''',
-                subject: 'Jenkins Pipeline Notification',
-                to: 'shwetavarma28@gmail.com'
-             }
+        sendEmailNotification()
         }
     }
+}
+
+private void sendEmailNotification(){
+mail
+to: 'shwetavarma28@gmail.com',
+          subject: 'Jenkins Pipeline Notification',
+           body: '''Hi,This is a test notification for your Jenkins Pipeline'''
 }
