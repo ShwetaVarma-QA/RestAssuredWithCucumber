@@ -1,6 +1,4 @@
-def serviceName = "RestAssuredWithCucumber"
 pipeline {
-    agent { docker { image 'maven:3.3.3' } }
     stages {
         stage('build') {
             steps {
@@ -9,3 +7,12 @@ pipeline {
         }
     }
 }
+stages {
+        stage('API Tests') {
+            steps {
+                container('node') {
+                   sh './gradlew clean allScenarios'
+                }
+            }
+        }
+    }
