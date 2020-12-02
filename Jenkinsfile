@@ -1,5 +1,9 @@
 
 pipeline {
+triggers {
+        cron('0 */3 * * 0-6')
+    }
+    
     agent any
     stages {
         stage('build') {
