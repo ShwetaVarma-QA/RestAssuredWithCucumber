@@ -10,8 +10,9 @@ pipeline {
         stage('API Tests') {
             steps {
                    sh './gradlew cucumber -P tags=@AllEmployees'
-            }
+            echo "finishing tests"
         sendEmailNotification()
+        }
         }
     }
 }
