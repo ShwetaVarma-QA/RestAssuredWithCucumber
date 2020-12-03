@@ -2,3 +2,4 @@
 build
 .gradle
 report
+.DS_Store
