@@ -21,11 +21,11 @@
       "/src/main/resources/testData.properties"
    
    
-##Execution of Tests
-###To run all scenarios use following command
+## Execution of Tests
+### To run all scenarios use following command
 
        "./gradlew allScenarios"
-###To run independent scenarios use following commands
+### To run independent scenarios use following commands
 * For executing scenarios of update call
 
        "./gradlew cucumber -P tags=@UpdateEmployee"
@@ -42,7 +42,7 @@
        "./gradlew cucumber -P tags=@EmployeeDetails"
        "./gradlew cucumber -P tags=@AllEmployees"
 
-#Jenkins File
+## Jenkins File
 
 Used Docker to run jenkins locally and configured the webhook url from git using ngrok
 
